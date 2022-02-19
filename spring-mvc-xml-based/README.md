@@ -9,4 +9,4 @@ Used APIs,
 - Spring MVC 3.2.8
 - Spring Security 3.2.3
 
-> This project is in the alpha stage
+> This project is in the development stage

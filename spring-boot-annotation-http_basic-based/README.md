@@ -12,4 +12,4 @@ Used APIs,
 - H2database
 - Spring Security 4.2
 
-> This project is in the alpha stage
+> This project is in the development stage

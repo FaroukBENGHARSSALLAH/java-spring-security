@@ -15,6 +15,6 @@ Project Structure
 - [x] spring-boot-annotation-http_basic-based
 - [x] spring-boot-annotaion-jwt-based
 - [x] spring-boot-annotation-ouath-based
-- [] spring-boot-annotation-sso-keycloak-based
+- [ ] spring-boot-annotation-sso-keycloak-based
 
 > This project is in the development stage
