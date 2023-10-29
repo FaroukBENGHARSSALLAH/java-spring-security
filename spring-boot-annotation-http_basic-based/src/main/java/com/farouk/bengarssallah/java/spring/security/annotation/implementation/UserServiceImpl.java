@@ -1,7 +1,6 @@
 package com.farouk.bengarssallah.java.spring.security.annotation.implementation;
 
 import java.util.List;
-import java.io.Serializable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,24 +19,24 @@ public class UserServiceImpl implements UserService
     @Transactional
     @Override
     public void addUser(final User user) {
-        this.userRepository.save((Object)user);
+        this.userRepository.save(user);
     }
     
     @Transactional
     @Override
     public void editUser(final User user) {
-        this.userRepository.save((Object)user);
+        this.userRepository.save(user);
     }
     
     @Transactional
     @Override
     public void deleteUser(final long id) {
-        this.userRepository.delete((Serializable)id);
+        this.userRepository.delete(id);
     }
     
     @Override
     public User findById(final long id) {
-        return (User)this.userRepository.findOne((Serializable)id);
+        return (User)this.userRepository.findOne(id);
     }
     
     @Override

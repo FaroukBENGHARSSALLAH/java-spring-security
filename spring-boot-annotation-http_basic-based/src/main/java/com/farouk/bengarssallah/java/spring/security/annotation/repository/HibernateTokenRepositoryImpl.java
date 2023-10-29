@@ -1,7 +1,6 @@
 package com.farouk.bengarssallah.java.spring.security.annotation.repository;
 
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.security.web.authentication.rememberme.PersistentRememberMeToken;
@@ -26,7 +25,7 @@ public class HibernateTokenRepositoryImpl implements PersistentTokenRepository
         persistentLogin.setSeries(token.getSeries());
         persistentLogin.setToken(token.getTokenValue());
         persistentLogin.setLast_used(token.getDate());
-        this.persistentLoginRepository.save((Object)persistentLogin);
+        this.persistentLoginRepository.save(persistentLogin);
     }
     
     public PersistentRememberMeToken getTokenForSeries(final String seriesId) {
@@ -38,11 +37,11 @@ public class HibernateTokenRepositoryImpl implements PersistentTokenRepository
         final List<PersistentLogin> persistentLogins = (List<PersistentLogin>)this.persistentLoginRepository.findByUsername(username);
         if (persistentLogins.size() > 1) {
             for (final PersistentLogin p : persistentLogins) {
-                this.persistentLoginRepository.delete((Object)p);
+                this.persistentLoginRepository.delete(p);
             }
         }
         else if (persistentLogins.size() == 1) {
-            this.persistentLoginRepository.delete((Object)persistentLogins.get(0));
+            this.persistentLoginRepository.delete(persistentLogins.get(0));
         }
     }
     
@@ -50,7 +49,7 @@ public class HibernateTokenRepositoryImpl implements PersistentTokenRepository
         final PersistentLogin persistentLogin = this.persistentLoginRepository.findBySeries(seriesId);
         persistentLogin.setToken(tokenValue);
         persistentLogin.setLast_used(lastUsed);
-        this.persistentLoginRepository.save((Object)persistentLogin);
+        this.persistentLoginRepository.save(persistentLogin);
     }
 }
 

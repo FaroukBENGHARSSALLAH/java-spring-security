@@ -1,7 +1,6 @@
 package com.farouk.bengarssallah.java.spring.security.annotation.implementation;
 
 import java.util.List;
-import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +20,7 @@ public class UserRoleServiceImpl implements UserRoleService
     
     @Override
     public UserRole findById(final long id) {
-        return (UserRole)this.userRoleRepository.findOne((Serializable)id);
+        return (UserRole)this.userRoleRepository.findOne(id);
     }
     
     @Override

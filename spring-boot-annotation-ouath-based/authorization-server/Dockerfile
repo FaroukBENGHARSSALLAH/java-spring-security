@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-ADD target/quod*.war /app.war
-CMD["java","-jar", "/app.war", "--spring.profiles.active=prod"]
+ADD target/*.jar /jar.jar
+RUN java -jar ./app.jar
 EXPOSE 8080

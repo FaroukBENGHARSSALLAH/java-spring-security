@@ -1,6 +1,5 @@
 package com.farouk.bengarssallah.java.spring.security.annotation.security;
 
-import java.util.Iterator;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.ArrayList;

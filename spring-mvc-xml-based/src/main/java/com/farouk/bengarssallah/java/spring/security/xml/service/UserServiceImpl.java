@@ -6,21 +6,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.farouk.bengarssallah.java.spring.security.xml.dao.UserDao;
 import com.farouk.bengarssallah.java.spring.security.xml.domain.User;
- 
- 
+
 @Service("userService")
 @Transactional
-public class UserServiceImpl implements UserService{
- 
-    @Autowired
-    private UserDao dao;
- 
-    public User findById(int id) {
-        return dao.findById(id);
-    }
- 
-    public User findBySso(String sso) {
-        return dao.findBySSO(sso);
-    }
- 
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserDao dao;
+
+	public User findById(int id) {
+		return dao.findById(id);
+	}
+
+	public User findByUsername(String username) {
+		return dao.findByUsername(username);
+	}
+
 }
